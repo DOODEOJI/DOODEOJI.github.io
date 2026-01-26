@@ -1,68 +1,45 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="sidebar-menu" style="margin-top: 40px; text-align: left;">
 
-{% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    {% include head-custom.html %}
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="{{ "/" | relative_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+  {% for category in site.categories %}
+    <details open style="margin-bottom: 15px;">
+      <summary style="font-weight: bold; cursor: pointer; font-size: 18px; list-style: none;">
+        📂 {{ category[0] }}
+      </summary>
+      
+      <div style="margin-left: 10px; margin-top: 10px; border-left: 2px solid #eee; padding-left: 10px;">
+        
+        {% assign category_posts = category[1] %}
+        
+        {% assign primary_tags_list = "" | split: "" %}
+        {% for post in category_posts %}
+          {% if post.tags.size > 0 %}
+            {% assign primary_tags_list = primary_tags_list | push: post.tags[0] %}
+          {% endif %}
+        {% endfor %}
+        {% assign unique_primary_tags = primary_tags_list | uniq | sort %}
 
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-
-        {% if site.github.is_project_page %}
-        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_name }}</small></a></p>
-        {% endif %}
-        {% if site.github.is_user_page %}
-        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
-        {% endif %}
-
-        <div style="margin-top: 50px; text-align: left;">
-          
-          {% for category in site.categories %}
-            <h3 style="margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;">
-              {{ category[0] }}
-            </h3>
+        {% for tag_name in unique_primary_tags %}
+          <details style="margin-bottom: 8px;">
+            <summary style="cursor: pointer; color: #555; font-size: 15px;">
+              # {{ tag_name }}
+            </summary>
             
-            <ul style="list-style: none; padding-left: 10px; margin-bottom: 30px;">
-              {% assign raw_tags = "" %}
-              {% for post in category[1] %}
-                {% assign post_tags = post.tags | join: "," %}
-                {% if post_tags != "" %}
-                  {% assign raw_tags = raw_tags | append: "," | append: post_tags %}
-                {% endif %}
-              {% endfor %}
-              
-              {% assign unique_tags = raw_tags | split: "," | uniq | sort %}
-              {% for tag in unique_tags %}
-                {% if tag != "" %}
-                <li style="margin-bottom: 5px;">
-                  <a href="{{ '/tags/#' | relative_url }}{{ tag | slugify }}" style="font-size: 14px; text-decoration: none; color: #666;">
-                    # {{ tag }}
-                  </a>
-                </li>
+            <ul style="margin: 5px 0 10px 20px; padding: 0;">
+              {% for post in category_posts %}
+                {% if post.tags[0] == tag_name %}
+                  <li style="list-style: none; margin-bottom: 4px;">
+                    <a href="{{ post.url | relative_url }}" style="font-size: 13px; text-decoration: none; color: #0366d6;">
+                      - {{ post.title }}
+                    </a>
+                  </li>
                 {% endif %}
               {% endfor %}
             </ul>
-          {% endfor %}
+          </details>
+        {% endfor %}
 
-        </div>
-        </header>
-      <section>
+      </div>
+    </details>
+  {% endfor %}
 
-      {{ content }}
-
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-  </body>
-</html>
+</div>

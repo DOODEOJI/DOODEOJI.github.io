@@ -5,13 +5,13 @@ permalink: /tags/
 ---
 
 <div class="tag-filter-container" style="margin-bottom: 30px;">
-  <button onclick="filterTags('all')" class="tag-box" style="border: none; cursor: pointer; font-size: 15px; font-weight: bold; background-color: #333; color: white;">
+  <button id="tag-all" onclick="filterTags('all')" class="tag-btn active" style="border: none; cursor: pointer; font-size: 15px; font-weight: bold; padding: 6px 14px; border-radius: 6px; margin: 3px; background-color: #333; color: white; transition: 0.2s;">
     전체 ({{ site.posts.size }})
   </button>
 
   {% assign tags = site.tags | sort %}
   {% for tag in tags %}
-    <button onclick="filterTags('{{ tag[0] | slugify }}')" class="tag-box" style="border: 1px solid #e1e4e8; cursor: pointer; font-size: 15px;">
+    <button id="tag-{{ tag[0] | slugify }}" onclick="filterTags('{{ tag[0] | slugify }}')" class="tag-btn" style="border: 1px solid #e1e4e8; cursor: pointer; font-size: 15px; padding: 6px 14px; border-radius: 6px; margin: 3px; background-color: #f0f6fc; color: #24292f; transition: 0.2s;">
       {{ tag[0] }}
     </button>
   {% endfor %}
@@ -46,23 +46,43 @@ permalink: /tags/
 <script>
   function filterTags(tag) {
     var posts = document.getElementsByClassName('post-item');
-    
+
+    // 글 필터링
     for (var i = 0; i < posts.length; i++) {
       var post = posts[i];
       var postTags = post.getAttribute('data-tags');
 
-      // 'all'을 선택하거나, 해당 글이 선택된 태그를 포함하고 있으면 보여줌
       if (tag === 'all' || postTags.includes(tag)) {
         post.style.display = 'block';
       } else {
         post.style.display = 'none';
       }
     }
+
+    // 버튼 스타일 변경
+    var buttons = document.getElementsByClassName('tag-btn');
+    for (var i = 0; i < buttons.length; i++) {
+      var btn = buttons[i];
+      // 모든 버튼을 하늘색으로 초기화
+      btn.style.backgroundColor = '#f0f6fc';
+      btn.style.color = '#24292f';
+      btn.style.border = '1px solid #e1e4e8';
+      btn.style.fontWeight = 'normal';
+    }
+
+    // 선택된 버튼을 까만색으로
+    var selectedBtn = document.getElementById('tag-' + tag);
+    if (selectedBtn) {
+      selectedBtn.style.backgroundColor = '#333';
+      selectedBtn.style.color = 'white';
+      selectedBtn.style.border = 'none';
+      selectedBtn.style.fontWeight = 'bold';
+    }
   }
 
-  // 페이지 로드 시 URL에 태그가 있으면(예: tags/#whisper) 자동으로 필터링
+  // 페이지 로드 시 URL에 태그가 있으면 자동으로 필터링
   window.onload = function() {
-    var hash = window.location.hash.substring(1); // # 제거
+    var hash = window.location.hash.substring(1);
     if (hash) {
       filterTags(hash);
     }

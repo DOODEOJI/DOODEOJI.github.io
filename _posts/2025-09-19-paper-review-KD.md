@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[논문 정리] A Survey on Knowledge Distillation of Large Language Models"
+title:  "[논문 정리] Distilling the Knowledge in a Neural Network"
 date:   2025-09-19
 categories: [NLP]
-tags: [Knowledge Distillation, Large Language Models]
+tags: [Knowledge Distillation]
 ---
 
 ## 2.1 overview

@@ -83,7 +83,7 @@
             </li>
             {% for category in site.categories %}
               <li style="margin-bottom: 8px; margin-left: 10px;">
-                <a href="{{ '/categories/' | relative_url }}#{{ category[0] | slugify }}" style="text-decoration: none; color: #0366d6; font-size: 15px;">
+                <a href="{{ '/categories/' | append: category[0] | downcase | append: '/' | relative_url }}" style="text-decoration: none; color: #0366d6; font-size: 15px;">
                   📂 {{ category[0] }} <span style="color: #999; font-size: 0.9em;">({{ category[1].size }})</span>
                 </a>
               </li>

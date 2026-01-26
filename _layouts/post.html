@@ -11,7 +11,7 @@ layout: default
     </span>
 
     {% for category in page.categories %}
-      <a href="{{ '/categories/' | relative_url }}#{{ category | slugify }}" style="font-size: 13px; padding: 3px 10px; background-color: #e8f4f8; color: #0969da; border-radius: 4px; text-decoration: none; margin-right: 5px;">
+      <a href="{{ '/categories/' | append: category | downcase | append: '/' | relative_url }}" style="font-size: 13px; padding: 3px 10px; background-color: #e8f4f8; color: #0969da; border-radius: 4px; text-decoration: none; margin-right: 5px;">
         📂 {{ category }}
       </a>
     {% endfor %}

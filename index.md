@@ -14,7 +14,7 @@ title: Home
 {% for category in sorted_categories %}
 <div style="margin-bottom: 40px;">
   <h3 style="border-left: 4px solid #0969da; padding-left: 10px; margin-bottom: 15px;">
-    <a href="{{ '/categories/' | relative_url }}#{{ category[0] | slugify }}" style="text-decoration: none; color: #333;">
+    <a href="{{ '/categories/' | append: category[0] | downcase | append: '/' | relative_url }}" style="text-decoration: none; color: #333;">
       📂 {{ category[0] }}
     </a>
     <span style="font-size: 14px; color: #888; font-weight: normal;">({{ category[1].size }})</span>

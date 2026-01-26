@@ -1,3 +1,15 @@
 title: 인공지능 논문 정리
-description: Dahyun Jung from SKKU
-theme: jekyll-theme-minimal 
+description: Dahyun Jung from SKKU AAI/SWE
+theme: jekyll-theme-minimal
+
+plugins:
+  - jekyll-archives
+  - jekyll-seo-tag
+
+jekyll-archives:
+  enabled:
+    - categories
+  layouts:
+    category: archive-category
+  permalinks:
+    category: /categories/:name/

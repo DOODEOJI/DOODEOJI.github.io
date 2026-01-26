@@ -5,7 +5,7 @@ permalink: /tags/
 ---
 
 <div class="tag-filter-container" style="margin-bottom: 30px;">
-  <button id="tag-all" onclick="filterTags('all')" class="tag-btn active" style="border: none; cursor: pointer; font-size: 15px; font-weight: bold; padding: 6px 14px; border-radius: 6px; margin: 3px; background-color: #333; color: white; transition: 0.2s;">
+  <button id="tag-all" onclick="filterTags('all')" class="tag-btn" style="border: 1px solid #e1e4e8; cursor: pointer; font-size: 15px; padding: 6px 14px; border-radius: 6px; margin: 3px; background-color: #f0f6fc; color: #24292f; transition: 0.2s;">
     전체 ({{ site.posts.size }})
   </button>
 
@@ -80,11 +80,10 @@ permalink: /tags/
     }
   }
 
-  // 페이지 로드 시 URL에 태그가 있으면 자동으로 필터링
+  // 페이지 로드 시 초기화
   window.onload = function() {
     var hash = window.location.hash.substring(1);
-    if (hash) {
-      filterTags(hash);
-    }
+    // hash가 있으면 해당 태그, 없으면 전체 선택
+    filterTags(hash || 'all');
   };
 </script>

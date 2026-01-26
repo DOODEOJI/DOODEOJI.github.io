@@ -33,6 +33,7 @@ paper_url : https://arxiv.org/pdf/2307.14743
 
 ### LocalAgreement
 ![LocalAgreement](/assets/images/2025-11/whisper-streaming/local_agreement.png)
+<img src="/assets/images/2025-11/whisper-streaming/local_agreement.png" width="500" alt="LocalAgreement">
 * 시점 간 동일하게 2회 겹치는 buffer content에 대해 confirm
 * confirm 하는 구간에 온점 존재하면 trim하고 버퍼에 남겨놓음
 * buffer confirm 시 이전 context와 비교하여 변경된 부분이 있어도 반영하지 않음

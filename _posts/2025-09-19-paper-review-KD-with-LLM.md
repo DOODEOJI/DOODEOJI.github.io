@@ -23,7 +23,7 @@ paper_url : https://arxiv.org/pdf/2402.13116
 
 ## 2.4 Distillation Pipeline in LLM era
 * 단어 elicitation 끌어내기
-<img src="/assets/images/2025-09/KD_with_LLM/elicitation.png" width="700" alt="elicitation">
+<img src="/assets/images/2025-09/KD_with_LLM/elicitation.png" width="550" alt="elicitation">
 * teacher 모델에서 skill/domain tuning, alignment를 한 후 그에 맞는 dataset을 입력. 프롬프트를 통해 teacher의 단순히 정답 뿐만 아니라 추론, 사고방식 (chain of thought)을 student 에게 주입
 
 **Target Skill or Domain Streering Teacher LLM**
@@ -37,7 +37,7 @@ paper_url : https://arxiv.org/pdf/2402.13116
 ## 3.1 Knowledge
 
 ### 3.1.1 Labeling
-<img src="/assets/images/2025-09/KD_with_LLM/labeling.png" width="700" alt="labeling">
+<img src="/assets/images/2025-09/KD_with_LLM/labeling.png" width="550" alt="labeling">
 * Instruction I (LLM에게 지시)
     * (e.g. “You must generate a detailed and long answer.” or “explain like I’m five, think step-by-step”)
 * Demonstration c (output을 내기 위한 x,y 쌍 제공)
@@ -46,7 +46,7 @@ paper_url : https://arxiv.org/pdf/2402.13116
 * 두 teacher model 간 대화도 위의 인간의 query와 상응하는 dialogue 생성 가능
 
 ### 3.1.2 Expansion
-<img src="/assets/images/2025-09/KD_with_LLM/expansion.png" width="700" alt="expansion">
+<img src="/assets/images/2025-09/KD_with_LLM/expansion.png" width="550" alt="expansion">
 * labeling → lack of scale and variety of the input data (← privacy of the data)
 * input x도 demonstration을 통해 LLM이 직접 생성
 * 생성된 expansion input은 또 다시 demonstration pool로 추가됨
@@ -58,7 +58,7 @@ paper_url : https://arxiv.org/pdf/2402.13116
     * ⇒ bias를 만들어 낼 수 있음
 
 ### 3.1.3 Data Curation
-<img src="/assets/images/2025-09/KD_with_LLM/data_curation.png" width="700" alt="data_curation">
+<img src="/assets/images/2025-09/KD_with_LLM/data_curation.png" width="550" alt="data_curation">
 * Labeling : seed가 task dataset → potential noise, dirty data
 * Expansion : seed demonstration에서 generate → homogeneous data
 * ⇒ meta information을 seed로 입력
@@ -67,7 +67,7 @@ paper_url : https://arxiv.org/pdf/2402.13116
 * meta-info는 구체적인 demon이나 instruction이 아닌 task와 관련된 일반적인 정보들
 
 ### 3.1.4 Feature
-<img src="/assets/images/2025-09/KD_with_LLM/feature.png" width="700" alt="feature">
+<img src="/assets/images/2025-09/KD_with_LLM/feature.png" width="550" alt="feature">
 * Black-box 모델로 distillation → White-box로 distillation
 * output probability distribution : 확률 분포도 함께 제공
 * intermediate layer : task에 적합한 중간 층만 distillation
@@ -77,13 +77,13 @@ paper_url : https://arxiv.org/pdf/2402.13116
     * → Black-box 모델에선 적용 불가, 성능이 block-box 기반 distillation 보다 떨어짐
 
 ### 3.1.5 Feedback
-<img src="/assets/images/2025-09/KD_with_LLM/feedback.png" width="700" alt="feedback">
+<img src="/assets/images/2025-09/KD_with_LLM/feedback.png" width="550" alt="feedback">
 * Teacher가 student 모델의 생성값을 피드백
     * 랭킹 , 평가
     * 직접 고쳐주기 (자신의 출력물 기반 or GT 기반)
 
 ### 3.1.6 self-knowledge
-<img src="/assets/images/2025-09/KD_with_LLM/self-knowledge.png" width="700" alt="self-knowledge">
+<img src="/assets/images/2025-09/KD_with_LLM/self-knowledge.png" width="550" alt="self-knowledge">
 * Self-Instruct ~ data Expansion
 * Self-Align ~ context-distillation (produce indepth and detailed response)
 * RLCD ~ aligned, unaligned output 둘 다 사용

@@ -38,7 +38,8 @@ paper_url : https://arxiv.org/pdf/1503.02531
 
 > **[2.1 추가 설명]**
 >
-> <img src="/assets/images/2025-09/KD/2.1_math_1.png" width="550" alt="2.1">
+<img src="/assets/images/2025-09/KD/2.1_math_1.png" width="550" alt="2.1">
+
 >
 > * C = cross-entropy cost function
 > * z = distilled model’s logit
@@ -47,13 +48,15 @@ paper_url : https://arxiv.org/pdf/1503.02531
 > 테일러 전개를 사용하여 `e^z/T ≈ 1+z/T`로 근사 가능
 > (z/T가 1보다 작을 때만 성립하므로 high-T여야함 ~ T > |z| )
 >
-> <img src="/assets/images/2025-09/KD/2.1_math_2.png" width="550" alt="2.1">
+<img src="/assets/images/2025-09/KD/2.1_math_2.png" width="550" alt="2.1">
+
 >
 > 따라서 식을 정리하면 다음과 같음.
 > 또한, 수식의 간단함을 위해 zero-mean 가정 (`sum(z) = sum(v) = 0`)
 > ~ 상대적인 차이는 같으므로 분포는 유지됨
 >
-> <img src="/assets/images/2025-09/KD/2.1_math_3.png" width="550" alt="2.1">
+<img src="/assets/images/2025-09/KD/2.1_math_3.png" width="550" alt="2.1">
+
 >
 > 따라서 식이 정리되고, 단순히 logit 간의 squared error로 근사할 수 있음
 
@@ -118,7 +121,9 @@ paper_url : https://arxiv.org/pdf/1503.02531
 <img src="/assets/images/2025-09/KD/5.4.png" width="550" alt="5.4">
 
 > **[KL divergence 추가 설명]**
-> <img src="/assets/images/2025-09/KD/KD.png" width="550" alt="KD">
+>
+<img src="/assets/images/2025-09/KD/KD.png" width="550" alt="KD">
+
 > * P는 실제 분포, Q는 비교할 분포
 > * p와 q가 비슷할 수록 log 값이 작아지고 KLD 값이 작아짐
 > * p = q 인 상황이 0으로 최소

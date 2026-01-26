@@ -23,7 +23,9 @@ paper_url : https://arxiv.org/pdf/2402.13116
 
 ## 2.4 Distillation Pipeline in LLM era
 * 단어 elicitation 끌어내기
+
 <img src="/assets/images/2025-09/KD_with_LLM/elicitation.png" width="550" alt="elicitation">
+
 * teacher 모델에서 skill/domain tuning, alignment를 한 후 그에 맞는 dataset을 입력. 프롬프트를 통해 teacher의 단순히 정답 뿐만 아니라 추론, 사고방식 (chain of thought)을 student 에게 주입
 
 **Target Skill or Domain Streering Teacher LLM**

@@ -4,18 +4,26 @@ layout: default
 
 <div class="post-header" style="margin-bottom: 30px;">
   <h1 style="margin-bottom: 10px;">{{ page.title }}</h1>
-  
-  <span style="color: #888; font-size: 14px; margin-right: 10px;">
-    📅 {{ page.date | date: "%Y-%m-%d" }}
-  </span>
 
-  <span class="post-tags" style="display: inline-block;">
-    {% for tag in page.tags %}
-      <a href="{{ '/tags/#' | relative_url }}{{ tag | slugify }}" class="tag-box" style="font-size: 12px; padding: 2px 8px;">
-        {{ tag }}
+  <div style="margin-bottom: 10px;">
+    <span style="color: #888; font-size: 14px; margin-right: 10px;">
+      📅 {{ page.date | date: "%Y-%m-%d" }}
+    </span>
+
+    {% for category in page.categories %}
+      <a href="{{ '/categories/#' | relative_url }}{{ category | slugify }}" style="font-size: 13px; padding: 3px 10px; background-color: #e8f4f8; color: #0969da; border-radius: 4px; text-decoration: none; margin-right: 5px;">
+        📂 {{ category }}
       </a>
     {% endfor %}
-  </span>
+  </div>
+
+  <div class="post-tags">
+    {% for tag in page.tags %}
+      <a href="{{ '/tags/#' | relative_url }}{{ tag | slugify }}" class="tag-box" style="font-size: 12px; padding: 2px 8px;">
+        #{{ tag }}
+      </a>
+    {% endfor %}
+  </div>
 </div>
 
 <hr>

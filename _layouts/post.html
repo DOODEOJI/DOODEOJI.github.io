@@ -24,6 +24,14 @@ layout: default
       </a>
     {% endfor %}
   </div>
+
+  {% if page.paper_url %}
+  <div style="margin-top: 15px;">
+    <a href="{{ page.paper_url }}" target="_blank" style="font-size: 14px; color: #0969da; text-decoration: none;">
+      📄 논문 원문 보기 →
+    </a>
+  </div>
+  {% endif %}
 </div>
 
 <hr>

@@ -4,6 +4,7 @@ title:  "[논문 정리] A Survey on Knowledge Distillation of Large Language Mo
 date:   2025-09-19
 categories: [NLP]
 tags: [Knowledge Distillation, Large Language Models]
+paper_url : https://arxiv.org/pdf/2402.13116
 ---
 # Introduction
 * Cumbersome model → (distillate, transfer knowledge) small model for suitable

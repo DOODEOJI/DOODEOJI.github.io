@@ -4,6 +4,7 @@ title:  "[논문 정리] Whisper Streaming: Real-time Transcription via Local Ag
 date:   2025-11-09
 categories: [Speech]
 tags: [Whisper, Speech Recognition, Real-time]
+paper_url : https://arxiv.org/pdf/2307.14743
 ---
 
 ## Abstract
@@ -31,6 +32,7 @@ tags: [Whisper, Speech Recognition, Real-time]
 * T시점 이전 출력 시퀀스들을 기반으로 T시점 이전의 소스 시퀀스에 대한 출력_T 를 산출하는 Task
 
 ### LocalAgreement
+![LocalAgreement](/assets/images/2025-11/whisper-streaming/local_agreement.png)
 * 시점 간 동일하게 2회 겹치는 buffer content에 대해 confirm
 * confirm 하는 구간에 온점 존재하면 trim하고 버퍼에 남겨놓음
 * buffer confirm 시 이전 context와 비교하여 변경된 부분이 있어도 반영하지 않음

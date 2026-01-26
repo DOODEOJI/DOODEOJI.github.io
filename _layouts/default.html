@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 {% seo %}
+    <style>
+    .tag-box {
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 3px;
+        border: 1px solid #e1e4e8;
+        border-radius: 6px;
+        background-color: #f0f6fc; /* 연한 하늘색 배경 */
+        color: #24292f;
+        text-decoration: none !important; /* 밑줄 제거 */
+        font-size: 14px;
+        transition: 0.2s;
+    }
+    .tag-box:hover {
+        background-color: #dce7f5; /* 마우스 올렸을 때 진하게 */
+        border-color: #0366d6;
+        color: #0366d6;
+    }
+    </style>
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
   </head>

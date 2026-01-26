@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="post-header" style="margin-bottom: 30px;">
+  <h1 style="margin-bottom: 5px;">{{ page.title }}</h1>
+  <span style="color: #888; font-size: 14px;">{{ page.date | date: "%Y년 %m월 %d일" }}</span>
+</div>
+
+<div class="post-content">
+  {{ content }}
+</div>
+
+<hr style="margin: 40px 0;">
+
+<div class="post-tags">
+  <span style="font-weight: bold; margin-right: 10px;">Tag:</span>
+  {% for tag in page.tags %}
+    <a href="{{ '/tags/#' | relative_url }}{{ tag | slugify }}" class="tag-box">
+      {{ tag }}
+    </a>
+  {% endfor %}
+</div>

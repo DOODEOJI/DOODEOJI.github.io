@@ -3,21 +3,25 @@ layout: default
 ---
 
 <div class="post-header" style="margin-bottom: 30px;">
-  <h1 style="margin-bottom: 5px;">{{ page.title }}</h1>
-  <span style="color: #888; font-size: 14px;">{{ page.date | date: "%Y년 %m월 %d일" }}</span>
+  <h1 style="margin-bottom: 10px;">{{ page.title }}</h1>
+  
+  <span style="color: #888; font-size: 14px; margin-right: 10px;">
+    📅 {{ page.date | date: "%Y-%m-%d" }}
+  </span>
+
+  <span class="post-tags" style="display: inline-block;">
+    {% for tag in page.tags %}
+      <a href="{{ '/tags/#' | relative_url }}{{ tag | slugify }}" class="tag-box" style="font-size: 12px; padding: 2px 8px;">
+        {{ tag }}
+      </a>
+    {% endfor %}
+  </span>
 </div>
+
+<hr>
 
 <div class="post-content">
   {{ content }}
 </div>
 
-<hr style="margin: 40px 0;">
-
-<div class="post-tags">
-  <span style="font-weight: bold; margin-right: 10px;">Tag:</span>
-  {% for tag in page.tags %}
-    <a href="{{ '/tags/#' | relative_url }}{{ tag | slugify }}" class="tag-box">
-      {{ tag }}
-    </a>
-  {% endfor %}
-</div>
+<div style="height: 100px;"></div>

@@ -2,7 +2,7 @@
 layout: post
 title:  "[논문 정리] Whisper: Robust Speech Recognition via Large-Scale Weak Supervision"
 date:   2025-11-09
-categories: [Paper Review]
+categories: [Speech]
 tags: [Whisper, Speech Recognition]
 ---
 

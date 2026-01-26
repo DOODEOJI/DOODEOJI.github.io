@@ -29,18 +29,24 @@
         color: #0366d6;
       }
 
-      /* 2. 화면 넓게 쓰기 (Responsive) */
+      /* 2. 화면 넓게 쓰기 */
+      .wrapper {
+        width: 95% !important;
+        max-width: 1600px !important;
+        margin: 0 auto !important;
+      }
+      section {
+        max-width: none !important;
+        width: 100% !important;
+      }
+
+      /* 큰 화면에서 사이드바 레이아웃 */
       @media screen and (min-width: 64em) {
-        .wrapper {
-          width: 90% !important;       /* 전체 너비의 90% 사용 */
-          max-width: 1600px !important; /* 최대 너비 제한 대폭 완화 */
-        }
         section {
-          width: calc(100% - 320px) !important; /* 사이드바(약 300px) 제외하고 꽉 채우기 */
-          max-width: none !important;
+          width: calc(100% - 320px) !important;
         }
         header {
-          width: 280px !important;     /* 사이드바 너비 고정 */
+          width: 280px !important;
         }
       }
     </style>
@@ -70,6 +76,11 @@
                 📚 전체 글 ({{ site.posts.size }})
               </a>
             </li>
+            <li style="margin-bottom: 10px;">
+              <a href="{{ '/paper-review/' | relative_url }}" style="font-weight: bold; text-decoration: none; font-size: 16px; color: #333;">
+                📄 논문 리뷰
+              </a>
+            </li>
             {% for category in site.categories %}
               <li style="margin-bottom: 8px; margin-left: 10px;">
                 <a href="{{ '/categories/#' | relative_url }}{{ category[0] | slugify }}" style="text-decoration: none; color: #0366d6; font-size: 15px;">
@@ -79,8 +90,8 @@
             {% endfor %}
           </ul>
           <div style="margin-top: 30px;">
-            <a href="{{ '/tags/' | relative_url }}" style="font-size: 14px; color: #666; text-decoration: underline;">
-              # 태그(Tags) 모아보기
+            <a href="{{ '/tags/' | relative_url }}" class="tag-box" style="font-size: 14px;">
+              # 태그
             </a>
           </div>
         </div>

@@ -38,7 +38,7 @@ paper_url : https://arxiv.org/pdf/1503.02531
 
 > **[2.1 추가 설명]**
 >
-> <img src="/assets/images/2025-09/KD/2.1_math_1.png" width="1000" alt="2.1">
+> <img src="/assets/images/2025-09/KD/2.1_math_1.png" width="700" alt="2.1">
 >
 > * C = cross-entropy cost function
 > * z = distilled model’s logit
@@ -47,13 +47,13 @@ paper_url : https://arxiv.org/pdf/1503.02531
 > 테일러 전개를 사용하여 `e^z/T ≈ 1+z/T`로 근사 가능
 > (z/T가 1보다 작을 때만 성립하므로 high-T여야함 ~ T > |z| )
 >
-> <img src="/assets/images/2025-09/KD/2.1_math_2.png" width="1000" alt="2.1">
+> <img src="/assets/images/2025-09/KD/2.1_math_2.png" width="700" alt="2.1">
 >
 > 따라서 식을 정리하면 다음과 같음.
 > 또한, 수식의 간단함을 위해 zero-mean 가정 (`sum(z) = sum(v) = 0`)
 > ~ 상대적인 차이는 같으므로 분포는 유지됨
 >
-> <img src="/assets/images/2025-09/KD/2.1_math_3.png" width="1000" alt="2.1">
+> <img src="/assets/images/2025-09/KD/2.1_math_3.png" width="700" alt="2.1">
 >
 > 따라서 식이 정리되고, 단순히 logit 간의 squared error로 근사할 수 있음
 
@@ -79,7 +79,7 @@ paper_url : https://arxiv.org/pdf/1503.02531
 * **distilled**: T = [1, 2, 5, 10] (2가 최적), hard taget cross-entropy에는 가중치 0.5 적용
 * T = 1로 설정하고 distillation 수행하면 성능 향상은 제한적임
 
-<img src="/assets/images/2025-09/KD/ex_results.png" width="1000" alt="experiments_results">
+<img src="/assets/images/2025-09/KD/ex_results.png" width="700" alt="experiments_results">
 
 # Training ensembles of specialists on very big datasets
 * Ensemble 병렬 학습→ but, 추론 시 computation 속도가 느림
@@ -115,10 +115,10 @@ paper_url : https://arxiv.org/pdf/1503.02531
 * 최종 확률 분포 q를 계산하기 위해 KL divergence를 최소화
 * specialist에서 역시 관심 없는 클래스는 dustbin 클래스로 합침
 
-<img src="/assets/images/2025-09/KD/5.4.png" width="1000" alt="5.4">
+<img src="/assets/images/2025-09/KD/5.4.png" width="700" alt="5.4">
 
 > **[KL divergence 추가 설명]**
-> <img src="/assets/images/2025-09/KD/KD.png" width="1000" alt="KD">
+> <img src="/assets/images/2025-09/KD/KD.png" width="700" alt="KD">
 > * P는 실제 분포, Q는 비교할 분포
 > * p와 q가 비슷할 수록 log 값이 작아지고 KLD 값이 작아짐
 > * p = q 인 상황이 0으로 최소
@@ -131,7 +131,7 @@ paper_url : https://arxiv.org/pdf/1503.02531
 * 많은 specialist가 특정 class를 cover할 수록 성능은 좋아진다
 * specialist는 병렬화가 쉬워 확장성이 좋다
 
-<img src="/assets/images/2025-09/KD/final_results.png" width="1000" alt="final_results">
+<img src="/assets/images/2025-09/KD/final_results.png" width="700" alt="final_results">
 
 # Soft Targets as Regularizers
 * 3%의 dataset만 사용하여 모델 돌렸을 때 soft target이 훨씬 overfitting이 덜 된다

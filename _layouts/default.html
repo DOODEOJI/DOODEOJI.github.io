@@ -79,6 +79,11 @@
                 📄 논문 리뷰
               </a>
             </li>
+            <li style="margin-bottom: 10px;">
+              <a href="{{ '/baekjoon/' | relative_url }}" style="font-weight: bold; text-decoration: none; font-size: 16px; color: #333;">
+                💻 백준 공부
+              </a>
+            </li>
             {% for category in site.categories %}
               <li style="margin-bottom: 8px; margin-left: 10px;">
                 <a href="{{ '/categories/' | append: category[0] | downcase | append: '/' | relative_url }}" style="text-decoration: none; color: #0366d6; font-size: 15px;">

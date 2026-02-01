@@ -2,7 +2,7 @@
 layout: post
 title:  "[논문 정리] A Survey on Knowledge Distillation of Large Language Models"
 date:   2025-09-19
-categories: [NLP]
+categories: [논문리뷰, NLP]
 tags: [Knowledge Distillation, Large Language Models]
 paper_url : https://arxiv.org/pdf/2402.13116
 ---

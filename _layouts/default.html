@@ -74,27 +74,84 @@
                 📚 전체 글 ({{ site.posts.size }})
               </a>
             </li>
-            <li style="margin-bottom: 10px;">
+            <!-- 논문 리뷰 섹션 -->
+            <li style="margin-bottom: 5px;">
+              {% assign paper_count = 0 %}
+              {% for post in site.posts %}
+                {% if post.categories contains '논문리뷰' %}
+                  {% assign paper_count = paper_count | plus: 1 %}
+                {% endif %}
+              {% endfor %}
               <a href="{{ '/paper-review/' | relative_url }}" style="font-weight: bold; text-decoration: none; font-size: 16px; color: #333;">
-                📄 논문 리뷰
+                📄 논문 리뷰 ({{ paper_count }})
               </a>
+              <ul style="list-style: none; padding-left: 15px; margin-top: 5px;">
+                {% for category in site.categories %}
+                  {% if category[0] != '논문리뷰' and category[0] != '백준' %}
+                    {% assign has_paper = false %}
+                    {% assign subcat_count = 0 %}
+                    {% for post in category[1] %}
+                      {% if post.categories contains '논문리뷰' %}
+                        {% assign has_paper = true %}
+                        {% assign subcat_count = subcat_count | plus: 1 %}
+                      {% endif %}
+                    {% endfor %}
+                    {% if has_paper %}
+                      <li style="margin-bottom: 5px;">
+                        <a href="{{ '/categories/' | append: category[0] | downcase | append: '/' | relative_url }}" style="text-decoration: none; color: #0366d6; font-size: 14px;">
+                          📂 {{ category[0] }} <span style="color: #999; font-size: 0.9em;">({{ subcat_count }})</span>
+                        </a>
+                      </li>
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+              </ul>
             </li>
-            <li style="margin-bottom: 10px;">
+
+            <!-- 백준 공부 섹션 -->
+            <li style="margin-bottom: 5px; margin-top: 15px;">
+              {% assign baekjoon_count = 0 %}
+              {% for post in site.posts %}
+                {% if post.categories contains '백준' %}
+                  {% assign baekjoon_count = baekjoon_count | plus: 1 %}
+                {% endif %}
+              {% endfor %}
               <a href="{{ '/baekjoon/' | relative_url }}" style="font-weight: bold; text-decoration: none; font-size: 16px; color: #333;">
-                💻 백준 공부
+                💻 백준 공부 ({{ baekjoon_count }})
               </a>
+              <ul style="list-style: none; padding-left: 15px; margin-top: 5px;">
+                {% for category in site.categories %}
+                  {% if category[0] != '논문리뷰' and category[0] != '백준' %}
+                    {% assign has_baekjoon = false %}
+                    {% assign subcat_count = 0 %}
+                    {% for post in category[1] %}
+                      {% if post.categories contains '백준' %}
+                        {% assign has_baekjoon = true %}
+                        {% assign subcat_count = subcat_count | plus: 1 %}
+                      {% endif %}
+                    {% endfor %}
+                    {% if has_baekjoon %}
+                      <li style="margin-bottom: 5px;">
+                        <a href="{{ '/categories/' | append: category[0] | downcase | append: '/' | relative_url }}" style="text-decoration: none; color: #0366d6; font-size: 14px;">
+                          📂 {{ category[0] }} <span style="color: #999; font-size: 0.9em;">({{ subcat_count }})</span>
+                        </a>
+                      </li>
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+              </ul>
             </li>
-            {% for category in site.categories %}
-              <li style="margin-bottom: 8px; margin-left: 10px;">
-                <a href="{{ '/categories/' | append: category[0] | downcase | append: '/' | relative_url }}" style="text-decoration: none; color: #0366d6; font-size: 15px;">
-                  📂 {{ category[0] }} <span style="color: #999; font-size: 0.9em;">({{ category[1].size }})</span>
-                </a>
-              </li>
-            {% endfor %}
           </ul>
+
+          <!-- 태그 섹션 분리 -->
           <div style="margin-top: 30px;">
-            <a href="{{ '/tags/' | relative_url }}" class="tag-box" style="font-size: 14px;">
-              # 태그
+            <a href="{{ '/tags/paper-review/' | relative_url }}" class="tag-box" style="font-size: 14px;">
+              # 논문리뷰 태그
+            </a>
+          </div>
+          <div style="margin-top: 10px;">
+            <a href="{{ '/tags/baekjoon/' | relative_url }}" class="tag-box" style="font-size: 14px;">
+              # 백준 태그
             </a>
           </div>
         </div>

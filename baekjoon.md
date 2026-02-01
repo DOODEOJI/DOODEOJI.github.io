@@ -23,9 +23,11 @@ permalink: /baekjoon/
         </span>
 
         {% for category in post.categories %}
-          <span style="font-size: 12px; padding: 2px 8px; background-color: #e8f4f8; color: #0969da; border-radius: 4px; margin-left: 10px;">
-            {{ category }}
-          </span>
+          {% if category != '백준' %}
+            <span style="font-size: 12px; padding: 2px 8px; background-color: #e8f4f8; color: #0969da; border-radius: 4px; margin-left: 10px;">
+              {{ category }}
+            </span>
+          {% endif %}
         {% endfor %}
 
         <div style="margin-top: 8px;">

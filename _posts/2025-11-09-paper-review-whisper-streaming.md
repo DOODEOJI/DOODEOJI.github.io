@@ -2,7 +2,7 @@
 layout: post
 title:  "[논문 정리] Whisper Streaming: Real-time Transcription via Local Agreement"
 date:   2025-11-09
-categories: [Speech]
+categories: [논문리뷰, Speech]
 tags: [Whisper, Speech Recognition, Real-time]
 paper_url : https://arxiv.org/pdf/2307.14743
 ---

@@ -2,7 +2,7 @@
 layout: post
 title:  "[논문 정리] Distilling the Knowledge in a Neural Network"
 date:   2025-09-19
-categories: [NLP]
+categories: [논문리뷰, NLP]
 tags: [Knowledge Distillation]
 paper_url : https://arxiv.org/pdf/1503.02531
 ---

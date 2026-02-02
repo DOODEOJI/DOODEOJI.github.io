@@ -66,6 +66,18 @@
           </a>
         </div>
 
+        <!-- 검색창 -->
+        <div style="margin-top: 20px;">
+          <form action="{{ '/search/' | relative_url }}" method="get" style="display: flex;">
+            <input type="text" name="q" placeholder="검색..."
+                   style="flex: 1; padding: 8px 12px; font-size: 14px; border: 1px solid #e1e4e8; border-radius: 6px 0 0 6px; outline: none;">
+            <button type="submit"
+                    style="padding: 8px 12px; background-color: #0366d6; color: white; border: none; border-radius: 0 6px 6px 0; cursor: pointer;">
+              🔍
+            </button>
+          </form>
+        </div>
+
         <div class="sidebar-menu" style="margin-top: 40px; text-align: left; border-top: 1px solid #eee; padding-top: 20px;">
           <h3 style="margin-bottom: 15px;">목차</h3>
           <ul style="list-style: none; padding-left: 0;">

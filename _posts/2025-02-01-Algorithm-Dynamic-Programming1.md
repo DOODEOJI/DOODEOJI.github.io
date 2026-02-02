@@ -2,7 +2,7 @@
 layout: post
 title:  "[DP][Memoization] BFS에서 Visited 활용"
 date:   2025-02-01
-categories: [백준, DP]
+categories: [백준, Algorithm]
 tags: [DP, BFS]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Algorithm][base-n] n진수 자릿수 이어붙이기"
-date:   2025-02-03
+date:   2025-02-04
 categories: [백준, Algorithm]
 tags: [base-n, recursive function]
 ---

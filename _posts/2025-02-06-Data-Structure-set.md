@@ -2,7 +2,7 @@
 layout: post
 title:  "[Data Structure][Set] 중복 없는 ordered list"
 date:   2025-02-06
-categories: [백준, Data_Structure]
+categories: [백준, Data-Structure]
 tags: [set]
 ---
 
@@ -13,6 +13,8 @@ tags: [set]
 ## Seen, Ordered 두 객체 활용
 - `Set 객체(Seen)`를 통해 중복 확인 후 중복되지 않으면 `List 객체(Ordered)`에 `append`
 - 또한, 중복 체크하려는 객체가 복수일 때는 `tuple `형으로 넣어야 함 (list는 hashable X)
+
+---
 
 ## 백준 문제: N과 M (9) (silver II / 15663)
 

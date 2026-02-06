@@ -11,6 +11,8 @@ tags: [base-n, recursive function]
 - 따라서 누적값을 만들 때는 
 **ans = ans * n + quadrant** 처럼 n진수 이어붙이기로 생각하면 깔끔함
 
+---
+
 ## 백준 문제: Z (gold IV / 1074)
 
 ```python

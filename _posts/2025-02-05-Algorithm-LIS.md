@@ -21,6 +21,8 @@ tags: [DP, Longest Increasing Subsequence, LIS]
 - 예시: `[1, 2, 9, 4]`에서 4일 경우, `[1, 2]`가 대상
   - 9가 포함되면 `1, 2, 9, 4`와 같이 증가하는 수열이 성립하지 않음
 
+---
+
 ## 백준 문제: 가장 긴 증가하는 부분 수열 (silver II / 11053)
 
 ```python

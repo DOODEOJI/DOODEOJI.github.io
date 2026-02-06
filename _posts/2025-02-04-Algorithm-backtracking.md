@@ -52,6 +52,8 @@ visited = [False] * 4
 ## 참고 강의
 - [바킹독의 실전 알고리즘 0x0C강 - 백트래킹](https://www.youtube.com/watch?v=Enz2csssTCs)
 
+---
+
 ## 백준 문제: N과 M (1) (silver III / 15649)
 
 ```python

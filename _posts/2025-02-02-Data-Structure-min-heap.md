@@ -2,7 +2,7 @@
 layout: post
 title:  "[Data Structure][Heap] 최소 힙"
 date:   2025-02-02
-categories: [백준, Data-Structure]
+categories: [백준, Data_Structure]
 tags: [Min Heap]
 ---
 

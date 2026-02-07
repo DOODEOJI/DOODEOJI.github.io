@@ -3,7 +3,7 @@ layout: post
 title:  "[Data Structure][Heap] 최소 힙"
 date:   2025-02-02
 categories: [백준, Data-Structure]
-tags: [Min Heap]
+tags: [Min Heap, BOJ-1927]
 ---
 
 ## Min Heap (최소 힙)

@@ -3,7 +3,7 @@ layout: post
 title:  "[Algorithm][Dynamic Programming][LIS] 최장 길이 증가 부분 수열"
 date:   2025-02-05
 categories: [백준, Algorithm]
-tags: [DP, Longest Increasing Subsequence, LIS]
+tags: [DP, Longest Increasing Subsequence, LIS, BOJ-11053]
 ---
 
 ## LIS와 DP 핵심 정리

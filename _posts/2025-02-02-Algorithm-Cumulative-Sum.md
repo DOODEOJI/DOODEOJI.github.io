@@ -3,7 +3,7 @@ layout: post
 title:  "[Algorithm][Cumulative Sum] 누적합 구하기 알고리즘"
 date:   2025-02-02
 categories: [백준, Algorithm]
-tags: [Prefix Sum, Cumulative Sum]
+tags: [Prefix Sum, Cumulative Sum, DP, BOJ-11659]
 ---
 
 ## Cumulative Sum (누적합 알고리즘)

@@ -3,7 +3,7 @@ layout: post
 title:  "[Data Structure][Set] 중복 없는 ordered list"
 date:   2025-02-06
 categories: [백준, Data-Structure]
-tags: [set]
+tags: [set, BOJ-15663]
 ---
 
 ## 중복 없이 ordered list 만들기

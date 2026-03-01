@@ -31,7 +31,7 @@ tags: [Bellman-Ford, BOJ-1865]
 
 
 ## 참고 영상 (코드 참조)
-- [[동빈나] 코딩 테스트를 위한 벨만 포드 알고리즘 7분 핵심 요약](https://ddongwon.tistory.com/106)
+- [[동빈나] 코딩 테스트를 위한 벨만 포드 알고리즘 7분 핵심 요약](https://www.youtube.com/watch?v=Ppimbaxm8d8)
 
 ---
 

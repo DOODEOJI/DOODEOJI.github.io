@@ -16,7 +16,7 @@ tags: [Bellman-Ford, BOJ-1865]
 ## 알고리즘 동작
 
 1. 시작 정점의 dist는 0, 나머지는 INF로 초기화
-2. 모든 간선에 대해 relaxation 반복 (`N-1`번)
+2. 모든 간선에 대해 가중치 갱신 반복 (`N-1`번)
    - `dist[next] > dist[current] + weight`이면 갱신
    - `dist[current] != INF` 조건 필요 (아직 방문 안 된 정점의 이웃은 갱신하지 않음)
 3. `N`번째 반복에서 갱신되면 음수 사이클 존재 → 최단 거리 정의 불가

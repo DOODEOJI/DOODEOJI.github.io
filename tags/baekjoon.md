@@ -24,6 +24,7 @@ permalink: /tags/baekjoon/
   {% assign sorted_tags = baekjoon_tags | sort %}
 
   {% for tag in sorted_tags %}
+    {% if tag contains 'BOJ-' %}{% continue %}{% endif %}
     {% assign tag_count = 0 %}
     {% for post in baekjoon_posts %}
       {% if post.tags contains tag %}

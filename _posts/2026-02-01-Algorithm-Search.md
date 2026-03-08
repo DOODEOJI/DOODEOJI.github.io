@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Algorithm][Search] BFS, DFS Memoization"
-date:   2025-02-01
+date:   2026-02-01
 categories: [백준, Algorithm]
 tags: [BFS, DFS, BOJ-1463, BOJ-11726]
 ---

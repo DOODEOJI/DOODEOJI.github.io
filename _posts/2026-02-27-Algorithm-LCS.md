@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Algorithm][LCS] 가장 긴 부분 수열 찾기"
-date:   2025-02-27
+date:   2026-02-27
 categories: [백준, Algorithm]
 tags: [LCS, BOJ-9251]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Data Structure][Set] 중복 없는 ordered list"
-date:   2025-02-06
+date:   2026-02-06
 categories: [백준, Data-Structure]
 tags: [set, BOJ-15663]
 ---

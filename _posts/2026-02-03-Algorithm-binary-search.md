@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Algorithm][Binary Search] 이진 탐색"
-date:   2025-02-03
+date:   2026-02-03
 categories: [백준, Algorithm]
 tags: [Binary Search, Binary Jumping, BOJ-2805]
 ---

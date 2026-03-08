@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Algorithm][Dynamic Programming] 다이나믹 프로그래밍"
-date:   2025-02-07
+date:   2026-02-07
 categories: [백준, Algorithm]
 tags: [DP, BOJ-1149, BOJ-9095, BOJ-1463, BOJ-2579]
 ---

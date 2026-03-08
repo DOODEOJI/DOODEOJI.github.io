@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Algorithm][Matrix Exponentiation] 분할정복을 통한 행렬의 거듭제곱 (feat. 2진수 표현)"
-date:   2025-03-06
+date:   2026-03-06
 categories: [백준, Algorithm]
 tags: [Matrix Exponentiation, BOJ-10830, BOJ-11444]
 ---

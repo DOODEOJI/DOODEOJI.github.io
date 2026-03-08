@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Algorithm][Backtracking] 백트래킹 (되돌아가기)"
-date:   2025-02-04
+date:   2026-02-04
 categories: [백준, Algorithm]
 tags: [backtracking, recursive function, BOJ-15649]
 ---

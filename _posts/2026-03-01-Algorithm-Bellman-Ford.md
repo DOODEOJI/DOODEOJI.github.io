@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Algorithm][Bellman Ford] 최단 거리 찾기 (벨만 포드)"
-date:   2025-03-01
+date:   2026-03-01
 categories: [백준, Algorithm]
 tags: [Bellman-Ford, BOJ-1865]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Language][Python] 거듭제곱 내장함수"
-date:   2025-02-23
+date:   2026-02-23
 categories: [백준, Language]
 tags: [python, pow, BOJ-1629]
 ---

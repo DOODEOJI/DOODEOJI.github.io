@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Algorithm][Grid Graph] 격자 그래프 탐색"
-date:   2025-03-05
+date:   2026-03-05
 categories: [백준, Algorithm]
 tags: [Grid Graph, BFS, BOJ-2206]
 ---
